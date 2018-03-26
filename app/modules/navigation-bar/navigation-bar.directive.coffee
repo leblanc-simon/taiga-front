@@ -27,6 +27,7 @@ NavigationBarDirective = (currentUserService, navigationBarService, locationServ
 
         scope.vm.publicRegisterEnabled = config.get("publicRegisterEnabled")
         scope.vm.customSupportUrl = config.get("supportUrl")
+        scope.vm.anonymousHomeUrl = config.get("anonymousHomeUrl") || "https://taiga.io/"
 
         scope.vm.login = ->
             nextUrl = encodeURIComponent(locationService.url())
